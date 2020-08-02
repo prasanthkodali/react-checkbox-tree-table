@@ -1,6 +1,6 @@
-import React from "react";
-import classNames from "classnames";
-import TreeNode from "react-checkbox-tree";
+import React from 'react';
+import classNames from 'classnames';
+import TreeNode from 'react-checkbox-tree';
 
 class TreeTableNode extends TreeNode {
   renderChildren() {
@@ -15,12 +15,12 @@ class TreeTableNode extends TreeNode {
     const { className, disabled, expanded, isLeaf } = this.props;
     const nodeClass = classNames(
       {
-        "rct-node": true,
-        "rct-node-leaf": isLeaf,
-        "rct-node-parent": !isLeaf,
-        "rct-node-expanded": !isLeaf && expanded,
-        "rct-node-collapsed": !isLeaf && !expanded,
-        "rct-disabled": disabled,
+        'rct-node': true,
+        'rct-node-leaf': isLeaf,
+        'rct-node-parent': !isLeaf,
+        'rct-node-expanded': !isLeaf && expanded,
+        'rct-node-collapsed': !isLeaf && !expanded,
+        'rct-disabled': disabled
       },
       className
     );
