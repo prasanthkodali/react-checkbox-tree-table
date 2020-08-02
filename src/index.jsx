@@ -1,7 +1,7 @@
-import React from "react";
-import CheckboxTree from "react-checkbox-tree";
-import TreeTableNode from "./TreeTableNode";
-import "./index.scss";
+import React from 'react';
+import CheckboxTree from 'react-checkbox-tree';
+import TreeTableNode from './TreeTableNode';
+import './index.scss';
 
 class CheckboxTreeTable extends CheckboxTree {
   renderTreeNodes(nodes, parent = {}) {
@@ -15,7 +15,7 @@ class CheckboxTreeTable extends CheckboxTree {
       onlyLeafCheckboxes,
       optimisticToggle,
       showNodeTitle,
-      showNodeIcon,
+      showNodeIcon
     } = this.props;
     const { id, model } = this.state;
     const { icons: defaultIcons } = CheckboxTree.defaultProps;
@@ -67,8 +67,10 @@ class CheckboxTreeTable extends CheckboxTree {
           title={showNodeTitle ? node.title || node.label : node.title}
           treeId={id}
           value={node.value}
+          // eslint-disable-next-line react/jsx-handler-names
           onCheck={this.onCheck}
           onClick={onClick && this.onNodeClick}
+          // eslint-disable-next-line react/jsx-handler-names
           onExpand={this.onExpand}
         >
           {children}
